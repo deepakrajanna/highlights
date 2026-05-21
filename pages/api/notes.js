@@ -68,10 +68,10 @@ export default async function handler(req, res) {
       return exact !== -1 ? exact : headers.findIndex(h => h.includes(name));
     };
 
-    const typeCol    = col('annotation type') !== -1 ? col('annotation type') : col('type');
-    const annotCol   = col('annotation') !== -1 ? col('annotation') : 2;
-    const bookCol    = col('book');
-    const authorCol  = col('author');
+    const typeCol   = col('annotation type') !== -1 ? col('annotation type') : col('type');
+    const annotCol  = col('annotation') !== -1 ? col('annotation') : 2;
+    const bookCol   = col('book');
+    const authorCol = col('author');
 
     const notes = rows.slice(1)
       .map(row => ({
